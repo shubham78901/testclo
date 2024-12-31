@@ -34,8 +34,11 @@ const swaggerOptions = {
 
 const swaggerSpec = swaggerJsDoc(swaggerOptions);
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
-    explorer: true  // Optional: adds an "Explore" button in the UI
-}));
+const setupSwagger = (app) => {
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+        explorer: true  // Optional: adds an "Explore" button in the UI
+    }));
+};
+
 
 module.exports = setupSwagger;
