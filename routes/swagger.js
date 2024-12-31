@@ -11,7 +11,7 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: process.env.API_URL || 'http://34.193.209.98/:8000', // Dynamically set URL from environment or fallback to localhost
+                url: process.env.API_URL || 'http://34.193.209.98:8000', // Dynamically set URL from environment or fallback to default
             },
         ],
         security: [
